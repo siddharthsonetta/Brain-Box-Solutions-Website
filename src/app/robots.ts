@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: [],
     },
-    sitemap: "http://brainboxsolutions.net/sitemap.xml",
+    sitemap: "https://brainboxsolutions.net/sitemap.xml",
   };
 }

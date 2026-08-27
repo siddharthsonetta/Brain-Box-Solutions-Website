@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { services } from "@/data/content";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "http://brainboxsolutions.net";
+  const baseUrl = "https://brainboxsolutions.net";
 
   // Static routes
   const staticRoutes = ["", "/about", "/services", "/contact"].map((route) => ({

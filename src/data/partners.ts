@@ -2,33 +2,20 @@ export interface Partner {
   id: string;
   name: string;
   role: string;
+  extension?: string;
 }
 
 export const partners: Partner[] = [
   {
+    id: "microsoft",
+    name: "Microsoft",
+    role: "Cloud & OS Partner",
+    extension: "svg"
+  },
+  {
     id: "tally",
     name: "Tally Solutions",
     role: "Authorized Cloud Accounting Partner"
-  },
-  {
-    id: "hp",
-    name: "HP Enterprise",
-    role: "Hardware & Server Partner"
-  },
-  {
-    id: "fortinet",
-    name: "Fortinet",
-    role: "Cyber Security & Firewall Provider"
-  },
-  {
-    id: "dell",
-    name: "Dell Technologies",
-    role: "Core Infrastructure Solutions"
-  },
-  {
-    id: "quickheal",
-    name: "Quick Heal",
-    role: "Endpoint Protection & Security"
   },
   {
     id: "lenovo",

@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   keywords: ["Tally on Cloud", "TallyPrime on Cloud", "Busy on Cloud", "Marg on Cloud", "Database Hosting", "Customized ERP", "Virtual Private Server", "Mumbai Cloud Hosting", "Dubai Cloud Solutions"],
   authors: [{ name: "Brain Box Solutions" }],
   creator: "Brain Box Solutions",
-  metadataBase: new URL("http://brainboxsolutions.net"),
+  metadataBase: new URL("https://brainboxsolutions.net"),
   openGraph: {
     title: "Brain Box Solutions - Tally on Cloud & Cloud Hosting Solutions",
     description: "Secure, reliable, and lightning-fast cloud accounting and database solutions for modern enterprises.",
