@@ -8,9 +8,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Server, Shield, Cloud, Database, MonitorPlay, Settings, Phone, 
   ArrowRight, CheckCircle2, Factory, Building2, Calculator, Rocket,
-  ChevronDown, ChevronUp, Cpu, HardDrive, Lock, Users, Laptop, Printer, Layers
+  ChevronDown, ChevronUp, Cpu, HardDrive, Lock, Laptop, Printer
 } from "lucide-react";
-import { services } from "@/data/content";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 20 },
@@ -159,7 +158,7 @@ export default function ServicesPage() {
             {/* Featured 2: Tally on Cloud */}
             <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.1 }} className="bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100 group">
               <div className="h-64 relative overflow-hidden">
-                <Image src="/images/hero_background.jpg" alt="Tally on Cloud" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
+                <Image src="/images/tally-on-cloud.png" alt="Tally on Cloud" fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute inset-0 bg-slate-900/40"></div>
                 <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur px-4 py-2 rounded-lg font-bold text-slate-900">Business Applications</div>
               </div>
@@ -229,44 +228,28 @@ export default function ServicesPage() {
             <p className="text-lg text-slate-300 max-w-3xl">When raw performance and absolute control are non-negotiable. Our dedicated servers provide uncompromised computing power, isolated resources, and flexible configurations to host your most demanding business applications and high-traffic workloads.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
             {/* Windows Server */}
             <Link href="/services/windows-dedicated-servers" className="block group h-full">
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-6 h-full backdrop-blur-sm hover:bg-white/10 transition-colors">
-                <MonitorPlay className="w-8 h-8 text-blue-400 mb-4" />
-                <h3 className="text-xl font-bold mb-2">Windows Dedicated</h3>
-                <p className="text-sm text-slate-400 mb-4">Optimized for Remote Desktop, Active Directory, and Microsoft ecosystems.</p>
-                <span className="text-blue-400 text-sm font-bold flex items-center group-hover:text-blue-300">View Details <ArrowRight className="w-4 h-4 ml-1" /></span>
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-8 h-full backdrop-blur-sm hover:bg-white/10 transition-colors flex flex-col justify-between">
+                <div>
+                  <MonitorPlay className="w-8 h-8 text-blue-400 mb-4" />
+                  <h3 className="text-xl font-bold mb-2">Windows Dedicated</h3>
+                  <p className="text-sm text-slate-400 mb-4 leading-relaxed">Optimized for Remote Desktop, Active Directory, and Microsoft ecosystems.</p>
+                </div>
+                <span className="text-blue-400 text-sm font-bold flex items-center group-hover:text-blue-300 mt-2">View Details <ArrowRight className="w-4 h-4 ml-1" /></span>
               </div>
             </Link>
 
             {/* Linux Server */}
             <Link href="/services/linux-dedicated-servers" className="block group h-full">
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-6 h-full backdrop-blur-sm hover:bg-white/10 transition-colors">
-                <Cpu className="w-8 h-8 text-amber-400 mb-4" />
-                <h3 className="text-xl font-bold mb-2">Linux Dedicated</h3>
-                <p className="text-sm text-slate-400 mb-4">Flexible, secure open-source environments for web apps and databases.</p>
-                <span className="text-blue-400 text-sm font-bold flex items-center group-hover:text-blue-300">View Details <ArrowRight className="w-4 h-4 ml-1" /></span>
-              </div>
-            </Link>
-
-            {/* GPU Server */}
-            <Link href="/services/gpu-dedicated-servers" className="block group h-full">
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-6 h-full backdrop-blur-sm hover:bg-white/10 transition-colors">
-                <Layers className="w-8 h-8 text-emerald-400 mb-4" />
-                <h3 className="text-xl font-bold mb-2">GPU Dedicated</h3>
-                <p className="text-sm text-slate-400 mb-4">Accelerated computing for AI/ML, rendering, and data-intensive tasks.</p>
-                <span className="text-blue-400 text-sm font-bold flex items-center group-hover:text-blue-300">View Details <ArrowRight className="w-4 h-4 ml-1" /></span>
-              </div>
-            </Link>
-
-            {/* Video Streaming */}
-            <Link href="/services/video-streaming-servers" className="block group h-full">
-              <div className="bg-white/5 border border-white/10 rounded-2xl p-6 h-full backdrop-blur-sm hover:bg-white/10 transition-colors">
-                <MonitorPlay className="w-8 h-8 text-pink-400 mb-4" />
-                <h3 className="text-xl font-bold mb-2">Video Streaming</h3>
-                <p className="text-sm text-slate-400 mb-4">High-bandwidth, low-latency servers for reliable media delivery.</p>
-                <span className="text-blue-400 text-sm font-bold flex items-center group-hover:text-blue-300">View Details <ArrowRight className="w-4 h-4 ml-1" /></span>
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-8 h-full backdrop-blur-sm hover:bg-white/10 transition-colors flex flex-col justify-between">
+                <div>
+                  <Cpu className="w-8 h-8 text-amber-400 mb-4" />
+                  <h3 className="text-xl font-bold mb-2">Linux Dedicated</h3>
+                  <p className="text-sm text-slate-400 mb-4 leading-relaxed">Flexible, secure open-source environments for web apps and databases.</p>
+                </div>
+                <span className="text-blue-400 text-sm font-bold flex items-center group-hover:text-blue-300 mt-2">View Details <ArrowRight className="w-4 h-4 ml-1" /></span>
               </div>
             </Link>
           </div>
@@ -324,7 +307,7 @@ export default function ServicesPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="relative h-[500px] rounded-3xl overflow-hidden order-2 lg:order-1">
-              <Image src="/images/cybersecurity.jpg" alt="Backup & Security" fill className="object-cover" />
+              <Image src="/images/secure-cloud-backup-journey.png" alt="Secure Cloud Backup Journey" fill className="object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex flex-col justify-end p-8">
                 <div className="bg-white/10 backdrop-blur border border-white/20 p-6 rounded-2xl text-white">
                   <h4 className="font-bold mb-2">Automated Data Flow</h4>
@@ -411,14 +394,12 @@ export default function ServicesPage() {
             <p className="text-slate-400">Match your business challenge to our tailored solutions.</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { q: "Need uncompromised raw performance?", a: "Dedicated Servers", link: "/services/dedicated-servers", icon: Server },
               { q: "Need Tally accessible anywhere?", a: "Tally on Cloud", link: "/services/tally-on-cloud", icon: Cloud },
               { q: "Need business data protection?", a: "Cloud Backup", link: "/services/enterprise-cloud-backup", icon: Shield },
               { q: "Need remote Windows applications?", a: "TSPlus", link: "/services/tsplus", icon: MonitorPlay },
-              { q: "Need high-performance compute/AI?", a: "GPU Server", link: "/services/gpu-dedicated-servers", icon: Cpu },
-              { q: "Need to stream video globally?", a: "Video Streaming", link: "/services/video-streaming-servers", icon: MonitorPlay },
             ].map((item, i) => (
               <Link key={i} href={item.link} className="block group h-full">
                 <div className="bg-slate-800/50 hover:bg-slate-800 p-6 rounded-2xl border border-slate-700 hover:border-blue-500/50 transition-all h-full flex flex-col justify-between">

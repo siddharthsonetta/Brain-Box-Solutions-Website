@@ -20,5 +20,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  return [...staticRoutes, ...serviceRoutes];
+  // Legal and Governance policies
+  const policyRoutes = [
+    "/privacy-policy",
+    "/terms-and-conditions",
+    "/service-level-agreement",
+    "/data-backup-policy",
+    "/cancellation-refund-policy",
+    "/cookie-policy",
+    "/acceptable-use-policy",
+    "/disclaimer",
+    "/support-policy",
+  ].map((route) => ({
+    url: `${baseUrl}${route}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.5,
+  }));
+
+  return [...staticRoutes, ...serviceRoutes, ...policyRoutes];
 }

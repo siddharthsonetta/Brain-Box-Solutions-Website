@@ -6,7 +6,7 @@ export const tallyOnCloudService: RichServiceData = {
   hero: {
     title: "Tally on Cloud Solutions",
     subtitle: "Seamless Accounting from Anywhere, Anytime",
-    image: "/images/cloud_data.jpg",
+    image: "/images/tally-on-cloud.png",
     description: "Elevate your business with secure and scalable Tally Prime cloud hosting. Manage your finances, inventory, and compliance from any device without the hassle of maintaining on-premise servers."
   },
   overview: {

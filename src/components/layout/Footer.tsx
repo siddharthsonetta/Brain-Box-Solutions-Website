@@ -5,6 +5,18 @@ import Link from "next/link";
 import { Phone, Mail, MapPin, MessageSquare, ArrowUpRight, ChevronDown } from "lucide-react";
 import { services } from "@/data/content";
 
+const legalLinks = [
+  { name: "Privacy Policy", href: "/privacy-policy" },
+  { name: "Terms & Conditions", href: "/terms-and-conditions" },
+  { name: "Service Level Agreement", href: "/service-level-agreement" },
+  { name: "Data Backup Policy", href: "/data-backup-policy" },
+  { name: "Cancellation & Refund", href: "/cancellation-refund-policy" },
+  { name: "Cookie Policy", href: "/cookie-policy" },
+  { name: "Acceptable Use Policy", href: "/acceptable-use-policy" },
+  { name: "Disclaimer", href: "/disclaimer" },
+  { name: "Support Policy", href: "/support-policy" },
+];
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   const [openSection, setOpenSection] = useState<string | null>(null);
@@ -15,8 +27,8 @@ export default function Footer() {
 
   return (
     <footer className="bg-slate-50 text-slate-600 border-t border-slate-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-24">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 md:gap-10 lg:gap-8">
           {/* Brand Info */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center group">
@@ -58,24 +70,24 @@ export default function Footer() {
               </h3>
               <ChevronDown className={`h-4 w-4 md:hidden transition-transform ${openSection === 'company' ? 'rotate-180' : ''}`} />
             </button>
-            <ul className={`space-y-4 text-sm font-medium mt-6 md:mt-0 md:block overflow-hidden transition-all ${openSection === 'company' ? 'block' : 'hidden'}`}>
+            <ul className={`space-y-3 text-sm font-medium mt-6 md:mt-0 md:block overflow-hidden transition-all ${openSection === 'company' ? 'block' : 'hidden'}`}>
               <li>
-                <Link href="/" className="text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all inline-block py-1">
+                <Link href="/" className="text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all inline-block py-0.5">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all inline-block py-1">
+                <Link href="/about" className="text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all inline-block py-0.5">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all inline-block py-1">
+                <Link href="/services" className="text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all inline-block py-0.5">
                   All Services
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all inline-block py-1">
+                <Link href="/contact" className="text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all inline-block py-0.5">
                   Contact Us
                 </Link>
               </li>
@@ -93,15 +105,40 @@ export default function Footer() {
               </h3>
               <ChevronDown className={`h-4 w-4 md:hidden transition-transform ${openSection === 'solutions' ? 'rotate-180' : ''}`} />
             </button>
-            <ul className={`space-y-4 text-sm font-medium mt-6 md:mt-0 md:block overflow-hidden transition-all ${openSection === 'solutions' ? 'block' : 'hidden'}`}>
+            <ul className={`space-y-3 text-sm font-medium mt-6 md:mt-0 md:block overflow-hidden transition-all ${openSection === 'solutions' ? 'block' : 'hidden'}`}>
               {services.slice(0, 5).map((service) => (
                 <li key={service.slug}>
                   <Link
                     href={`/services/${service.slug}`}
-                    className="text-slate-600 hover:text-blue-600 transition-colors flex items-center group py-1"
+                    className="text-slate-600 hover:text-blue-600 transition-colors flex items-center group py-0.5"
                   >
                     <span className="group-hover:translate-x-1 transition-transform">{service.hero.title}</span>
                     <ArrowUpRight className="h-3 w-3 ml-1 opacity-0 group-hover:opacity-100 transition-opacity" />
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Legal & Policies */}
+          <div className="border-t border-slate-200/60 pt-6 md:border-0 md:pt-0">
+            <button 
+              onClick={() => toggleSection('legal')}
+              className="flex items-center justify-between w-full md:cursor-default focus:outline-none"
+            >
+              <h3 className="text-slate-900 text-xs font-bold uppercase tracking-widest md:mb-6">
+                Legal &amp; Policies
+              </h3>
+              <ChevronDown className={`h-4 w-4 md:hidden transition-transform ${openSection === 'legal' ? 'rotate-180' : ''}`} />
+            </button>
+            <ul className={`space-y-2.5 text-xs font-medium mt-6 md:mt-0 md:block overflow-hidden transition-all ${openSection === 'legal' ? 'block' : 'hidden'}`}>
+              {legalLinks.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    className="text-slate-600 hover:text-blue-600 hover:translate-x-1 transition-all inline-block py-0.5"
+                  >
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -152,12 +189,18 @@ export default function Footer() {
         {/* Lower Banner */}
         <div className="mt-12 pt-8 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 space-y-4 md:space-y-0 font-medium">
           <p className="text-center md:text-left">&copy; {currentYear} Brain Box Solutions. All rights reserved.</p>
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-3">
-            <Link href="#" className="hover:text-blue-600 transition-colors">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
+            <Link href="/privacy-policy" className="hover:text-blue-600 transition-colors">
               Privacy Policy
             </Link>
-            <Link href="#" className="hover:text-blue-600 transition-colors">
-              Terms of Service
+            <Link href="/terms-and-conditions" className="hover:text-blue-600 transition-colors">
+              Terms &amp; Conditions
+            </Link>
+            <Link href="/service-level-agreement" className="hover:text-blue-600 transition-colors">
+              SLA
+            </Link>
+            <Link href="/support-policy" className="hover:text-blue-600 transition-colors">
+              Support Policy
             </Link>
             <Link href="/sitemap.xml" className="hover:text-blue-600 transition-colors">
               Sitemap

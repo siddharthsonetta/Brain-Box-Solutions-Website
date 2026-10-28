@@ -25,6 +25,7 @@ export interface RichServiceData {
     description: string;
     icon: string;
   }[];
+  diagramImage?: string;
   howItWorks?: {
     step: number;
     title: string;

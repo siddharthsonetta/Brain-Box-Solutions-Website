@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, FormEvent } from "react";
+import Link from "next/link";
 import { Send, CheckCircle2, AlertCircle, Phone, Mail, MapPin } from "lucide-react";
 import { services, companyInfo } from "@/data/content";
 import { motion } from "framer-motion";
@@ -318,6 +319,16 @@ export default function ContactForm() {
                 </>
               )}
             </motion.button>
+            <p className="text-center text-[11px] text-slate-500 mt-3 leading-normal">
+              By submitting this inquiry, you acknowledge and agree to our{" "}
+              <Link href="/privacy-policy" className="text-blue-600 hover:underline font-medium">
+                Privacy Policy
+              </Link>{" "}
+              and{" "}
+              <Link href="/terms-and-conditions" className="text-blue-600 hover:underline font-medium">
+                Terms &amp; Conditions
+              </Link>.
+            </p>
           </form>
         )}
       </div>

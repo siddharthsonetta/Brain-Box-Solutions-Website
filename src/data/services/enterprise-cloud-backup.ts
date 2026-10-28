@@ -6,7 +6,7 @@ export const enterpriseCloudBackupService: RichServiceData = {
   hero: {
     title: "Enterprise Cloud Backup Solutions",
     subtitle: "Safeguard your data with seamless, automated cloud backups.",
-    image: "/images/cybersecurity.jpg",
+    image: "/images/secure-cloud-backup-journey.png",
     description: "Discover reliable enterprise cloud backup solutions. Ensure business continuity with automated backups, scalable storage, and rapid recovery options tailored to your organizational needs."
   },
   overview: {
@@ -64,6 +64,7 @@ export const enterpriseCloudBackupService: RichServiceData = {
       icon: "Globe"
     }
   ],
+  diagramImage: "/images/secure-cloud-backup-journey.png",
   howItWorks: [
     {
       step: 1,

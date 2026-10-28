@@ -34,12 +34,12 @@ export default function ServiceCard({ service }: ServiceCardProps) {
             src={service.hero.image}
             alt={service.hero.title}
             fill
-            className="object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-700"
+            className="object-cover opacity-85 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
           />
         ) : (
           <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900" />
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-white/80 via-transparent to-transparent" />
         
         {/* Floating Category Badge */}
         <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-[10px] font-bold text-slate-700 uppercase tracking-wider shadow-sm border border-slate-200">

@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 
@@ -78,6 +79,26 @@ export default async function ServiceDetailPage({ params }: PageProps) {
       
       <ServiceOverview title={service.overview.title} content={service.overview.content} />
       
+      {service.diagramImage && (
+        <section className="py-12 md:py-16 bg-slate-50 border-y border-slate-200/60 overflow-hidden">
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8">
+              <span className="text-xs font-bold uppercase tracking-widest text-blue-600">Architecture &amp; Flow</span>
+              <h2 className="text-2xl sm:text-3xl font-bold tracking-tight text-slate-900 mt-1">Automated Cloud Backup Architecture</h2>
+            </div>
+            <div className="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200/80 bg-white">
+              <Image 
+                src={service.diagramImage} 
+                alt={`${service.hero.title} Architecture & Workflow`}
+                width={2087}
+                height={754}
+                className="w-full h-auto object-contain"
+              />
+            </div>
+          </div>
+        </section>
+      )}
+
       {service.howItWorks && service.howItWorks.length > 0 && (
         <HowItWorksDiagram howItWorks={service.howItWorks} />
       )}

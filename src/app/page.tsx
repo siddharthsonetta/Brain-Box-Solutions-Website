@@ -1,11 +1,12 @@
 import Link from "next/link";
-import { ArrowRight, Calendar, Handshake, Grid, Headset, Shield, Cloud, Server, Database } from "lucide-react";
+import { ArrowRight, Calendar, Grid, Headset, Shield, Server } from "lucide-react";
 import Button from "@/components/ui/Button";
 import ServiceCard from "@/components/ui/ServiceCard";
 import ContactForm from "@/components/sections/ContactForm";
 import HeroVisual from "@/components/sections/HeroVisual";
 import PartnerShowcase from "@/components/PartnerShowcase";
 import Testimonials from "@/components/sections/Testimonials";
+import Clientele from "@/components/sections/Clientele";
 import CloudInfrastructureVisual from "@/components/sections/CloudInfrastructureVisual";
 import AnimatedSection from "@/components/ui/AnimatedSection";
 import { services, companyInfo, homepageContent } from "@/data/content";
@@ -121,11 +122,8 @@ export default function Home() {
           <AnimatedSection direction="up">
             <div className="mb-12">
               <div className="space-y-3 text-center md:text-left">
-                <span className="text-xs font-bold uppercase tracking-widest text-blue-600">
-                  Core Solutions
-                </span>
                 <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">
-                  Premium Enterprise Infrastructure
+                  Our Products & Services
                 </h2>
               </div>
             </div>
@@ -154,6 +152,9 @@ export default function Home() {
           </AnimatedSection>
         </div>
       </section>
+
+      {/* CLIENTELE CAROUSEL */}
+      <Clientele />
 
       {/* 4. SIGNATURE INFRASTRUCTURE VISUAL SECTION */}
       <section className="bg-slate-900 text-white py-20 md:py-32 border-t border-slate-800 relative overflow-hidden">

@@ -17,18 +17,18 @@ const testimonials: Testimonial[] = [
   {
     id: "dharmesh",
     name: "Dharmesh Solanki",
-    organization: "BNI SOL, SDS Global Services",
+    organization: "SDS Global Services",
     date: "27th June, 2025",
     photo: "/images/testimonials/dharmesh-solanki.jpg",
-    text: "Brainbox cloud solutions has exceeded our expectations! The installation at our client's office has been seamless, and the system runs smoothly. Bhavesh's exceptional support and personal attention to queries have been impressive. His responsiveness and expertise make him a trusted partner. I highly recommend Bhavesh's cloud services to anyone seeking reliable and efficient solutions. His professionalism and dedication are truly commendable!"
+    text: "Brainbox cloud solutions has exceeded our expectations! The installation at our client's office has been seamless, and the system runs smoothly. Bhavesh's exceptional support and personal attention to queries have been impressive. His responsiveness and expertise make him a trusted partner. I highly recommend Brain Box Solutions cloud services to anyone seeking reliable and efficient solutions. His professionalism and dedication are truly commendable!"
   },
   {
     id: "mansi",
     name: "Mansi Shah",
-    organization: "BNI SOL, Trishla International",
+    organization: "Trishla International",
     date: "27th June, 2023",
     photo: "/images/testimonials/mansi-shah.jpg",
-    text: "I am Mansi Shah, from Trishla International. We are distributors of Polycab Wires & Cables from 45 years and are located in the heart of Electrical Market “Lohar Chawl”. We are one stop solution for your electrical needs “We Bleed Electricity”.\n\nBhavesh Thakkar (Brain Box Solutions)\n\nRecently, I had developed a sudden injury in my knees and due to that I was advised to do Work from home, I was in a dilemma how to carry out work without going to office, I contacted Bhavesh Thakkar and narrated him my problems within no time he reached my office personally (as I was not available in office), checked my server computer, listed down all the licensed programs and informed his staff to provide cloud solutions on urgent basis and within 4 hours my data was ready on cloud server. My work has become so simplified that for the next few days I will be working from home without any hassles and tension.\n\nHis prompt service, well trained staff and perfect implementation of work needs to be applauded.\n\nHis Cloud service provides the most effective network for our business. I would definitely recommend all the business entrepreneurs to utilize his services which can help us to reduce capital investment on IT expenditure and also data can be properly organized and accessed hassle free from anywhere on the globe within few seconds.\n\n“Cloud Computing is a great euphemism for centralization of computer services under one server”\n\nBrain Box Solutions offers you just the same."
+    text: "Recently, I suffered a sudden knee injury and was advised to work from home. Bhavesh Thakkar promptly visited my office, assessed my server setup, and arranged a cloud solution within just four hours. His quick response, well-trained team, and efficient implementation made working remotely completely hassle-free. Brain Box Solutions provides reliable, cost-effective cloud services that simplify business operations, reduce IT infrastructure expenses, and enable secure data access from anywhere in the world. I highly recommend their services to all business owners looking for dependable cloud computing solutions."
   },
   {
     id: "sagar",
@@ -36,7 +36,7 @@ const testimonials: Testimonial[] = [
     organization: "Fotokraft production",
     date: "24th June, 2020",
     photo: "/images/testimonials/sagar-shah.jpg",
-    text: "Hello this is Sagar Shah partner at Fotokraft production. We are into print advertising. We do production for print advertising. We provide photographers, associated with modelling & celebrity agency makeup & hair stylish, stylist and more. I had referred Mr. Bhavesh Thakkar to one of my friend who required cloud service. He is satisfied with the service Mr. Bhavesh is providing and my friend will refer to his clients & friends for sure."
+    text: "I had referred Mr. Bhavesh to one of my friend who required cloud service. He is satisfied with the service Brain Box Solutions is providing. I am also using their service for my business and I am very happy with the service. I would like to recommend Brain Box Solutions to all my friends and business partners."
   }
 ];
 
